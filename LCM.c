@@ -1,26 +1,26 @@
 #include<stdio.h>
 int main()
 {
-    int m,n,temp,hcf,lcm,max=0,i;
-    scanf("%d%d",&m,&n);
+    int n,m,i,temp,min=0,hcf,lcm;
+    scanf("%d%d",&n,&m);
     if(n<m)
     {
         temp=n;
         n=m;
         m=temp;
     }
+    
     for(i=1;i<=m;i++)
     {
         if(n%i==0 && m%i==0)
         {
-            if(i>max)
+            if(i>min)
             {
-                max=i;
-                
+               min=i;
             }
         }
     }
-    hcf=max;
+    hcf=min;
     lcm=(m*n)/hcf;
     printf("%d",lcm);
 }
