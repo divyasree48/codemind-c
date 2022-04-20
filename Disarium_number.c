@@ -14,13 +14,14 @@ int main()
     while(rev)
     {
         dc++;
-        d1=rev%10;
-        rev=rev/10;
+        d1=rev%10;rev=rev/10;
         s=s+pow(d1,dc);
     }
+    
     n=temp;
     if(n==s)
     printf("True");
     else
     printf("False");
+    return 0;
 }
