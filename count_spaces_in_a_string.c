@@ -3,7 +3,7 @@
 int main()
 {
     int i,l,d=0;
-    char s[100];
+    char s[1000];
     scanf("%[^
 ]",s);
     l=strlen(s);
