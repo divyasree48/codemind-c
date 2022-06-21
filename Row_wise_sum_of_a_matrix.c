@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-    int r,c,arr[100][100],i,j,s=0;
+    int r,c,i,j,arr[100][100],s=0,s1=0,max=-999,max1=-999;
     scanf("%d%d",&r,&c);
     for(i=0;i<r;i++)
     {
@@ -10,13 +10,15 @@ int main()
             scanf("%d",&arr[i][j]);
         }
     }
-    for(i=0;i<r;i++)
-    {s=0;
-        for(j=0;j<c;j++)
-        {
-            s=s+arr[i][j];
-        }
-    
-    printf("%d ",s);
-    }
+   
+   for(i=0;i<r;i++)
+   {s1=0;
+       for(j=0;j<c;j++)
+       {
+           s1+=arr[i][j];
+       }
+      printf("%d ",s1);
+   }
+   
+ 
 }
