@@ -8,17 +8,17 @@ void fun(int *arr,int n)
         k=arr[i];
         while(arr[i])
         {
-            
             arr[i]=arr[i]/10;
             d++;
         }
-        if(k==0)d=1;
+        if(k==0)
+        d=1;
         printf("%d ",d);
     }
 }
 int main()
 {
-    int n,i,arr[100];
+    int n,arr[100],i;
     scanf("%d",&n);
     for(i=0;i<n;i++)
     {
