@@ -5,7 +5,7 @@ int main()
     int i,c=1,len;
     char s[100];
     scanf("%[^
-]s",s);
+]",s);
     len=strlen(s);
     for(i=0;i<len;i++)
     {
