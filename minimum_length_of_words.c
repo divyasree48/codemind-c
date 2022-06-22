@@ -2,10 +2,10 @@
 #include<string.h>
 int main()
 {
-    char string[100],shortest[30],longest[50];
-    int count=0,min,i,j,index=0,length;
+    char string[1000],shortest[30],longest[50];
+    int count=0,min,i,j,length,index=0;
     scanf("%[^
-]s",string);
+]",string);
     length=strlen(string);
     index=0;
     min=100;
@@ -29,6 +29,7 @@ int main()
     {
         min=count;
         index=length-min;
+        
     }
     j=0;
     for(i=index;i<index+min;i++)
@@ -39,4 +40,5 @@ int main()
     longest[j]=NULL;
     printf("%d",min);
     return 0;
+    
 }
