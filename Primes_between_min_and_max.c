@@ -1,52 +1,49 @@
-#include<stdio.h>//l21
-int fun(int *arr,int n,int max,int min)
+#include<stdio.h>
+int fun(int *arr,int n,int min,int max)
 {
     int i,d=0,j,c=0;
     if(max>min)
     {
-    for(i=min;i<=max;i++)
-    {d=0;
-    if(arr[i]==1)
-    d=1;
-        for(j=2;j<arr[i];j++)
+        for(i=min;i<=max;i++)
         {
-            
-         if(arr[i]%j==0)
+            d=0;
+            if(arr[i]==1)
+            d=1;
+            for(j=2;j<arr[i];j++)
             {
-                d++;
+                if(arr[i]%j==0)
+                {
+                    d++;
+                }
+            }
+            if(d==0)
+            {
+                c++;
             }
         }
-        if(d==0)
-        
-        {
-            c++;
-        }
-    }
-    return c;
+        return c;
     }
     else
     {
         for(i=max;i<=min;i++)
-    {d=0;
-    if(arr[i]==1)
-    d=1;
-        for(j=2;j<arr[i];j++)
         {
-            
-         if(arr[i]%j==0)
+            d=0;
+            if (arr[i]==1)
+            d=1;
+            for(j=2;j<arr[i];j++)
             {
-                d++;
+                if(arr[i]%j==0)
+                {
+                    d++;
+                }
+            }
+            if(d==0)
+            {
+                c++;
             }
         }
-        if(d==0)
-        
-        {
-            c++;
-        }
+        return c;
     }
-    return c;
-    }
-    
 }
 int main()
 {
@@ -73,6 +70,6 @@ int main()
         }
     }
     c=fun(arr,n,a,b);
-    
     printf("%d",c);
+    
 }
