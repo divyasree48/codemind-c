@@ -12,6 +12,8 @@ int func(char k)
     return 50;
     if(k=='C')
     return 100;
+    if(k=='D')
+    return 500;
     if(k=='M')
     return 1000;
     return -1;
