@@ -1,37 +1,22 @@
 #include<stdio.h>
 int main()
 {
-    int r,c,i,j,arr[100][100],s=0,s1=0,brr[100][100],d=0;
-    scanf("%d%d",&r,&c);
+    int r,c,i,j,sr=0,sc=0;
+    scanf("%d %d",&r,&c);
+    int a[r][c];
     for(i=0;i<r;i++)
     {
-        for (j=0;j<c;j++)
-        {
-        scanf("%d",&arr[i][j]);
-        }
+        for(j=0;j<c;j++)
+        scanf("%d",&a[i][j]);
     }
     for(i=0;i<r;i++)
     {
-        for (j=0;j<c;j++)
-        {
-            if (arr[i][j]%2==0)
-            {
-                s1+=arr[i][j];
-                
-            }
-        }
+        for(j=0;j<c;j++)
+        if(a[i][j]%2==0)
+        sr+=a[i][j];
+        else
+        sc+=a[i][j];
     }
-    printf("%d ",s1);
-    for(i=0;i<r;i++)
-    {
-        for (j=0;j<c;j++)
-        {
-            if (arr[i][j]%2!=0)
-            {
-                s+=arr[i][j];
-                
-            }
-        }
-    }
-    printf("%d",s);
+    printf("%d %d",sr,sc);
+    
 }
